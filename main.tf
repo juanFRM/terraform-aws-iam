@@ -133,10 +133,10 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
     ]
     resources = ["*"]
   }
-  statement {
-    actions   = ["sts:AssumeRole"]
-    resources = var.crossaccount_roles
-  }
+  # statement {
+  #   actions   = ["sts:AssumeRole"]
+  #   resources = var.crossaccount_roles
+  # }
 
 }
 
