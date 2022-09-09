@@ -139,6 +139,33 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
     ]
     resources = ["*"]
   }
+
+  statement {
+    actions = [
+      "dynamodb:Create*",
+      "dynamodb:Restore*",
+      "dynamodb:Update*",
+      "dynamodb:Describe*",
+      "dynamodb:List*",
+      "dynamodb:Get",
+      "dynamodb:Put*",
+      "dynamodb:Import*",
+      "dynamodb:Export*",
+      "dynamodb:Batch*",
+      "dynamodb:PartiQL*",
+      "dynamodb:Query",
+      "dynamodb:StartAwsBackupJob",
+      "dynamodb:TagResource",
+      "dynamodb:UntagResource",
+      "dynamodb:Scan",
+      "dynamodb:EnableKinesisStreamingDestination",
+      "dynamodb:DisableKinesisStreamingDestination",
+      "dynamodb:ConditionCheckItem",
+    ]
+    resources = [
+      "*"
+    ]
+  }
   # statement {
   #   actions   = ["sts:AssumeRole"]
   #   resources = var.crossaccount_roles
