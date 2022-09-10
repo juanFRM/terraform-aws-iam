@@ -19,9 +19,6 @@ variable "environment" {
 
 }
 
-variable "codepipeline_dev_role" {
-
-}
 
 variable "crossaccount_roles" {
   type        = list(string)

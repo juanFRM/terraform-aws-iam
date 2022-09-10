@@ -29,7 +29,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_account_id"></a> [account\_id](#input\_account\_id) | n/a | `any` | n/a | yes |
-| <a name="input_codepipeline_dev_role"></a> [codepipeline\_dev\_role](#input\_codepipeline\_dev\_role) | n/a | `any` | n/a | yes |
 | <a name="input_codestar_connection_arn"></a> [codestar\_connection\_arn](#input\_codestar\_connection\_arn) | n/a | `any` | n/a | yes |
 | <a name="input_crossaccount_roles"></a> [crossaccount\_roles](#input\_crossaccount\_roles) | List of cross account roles to be assume by main role | `list(string)` | `[]` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | n/a | `any` | n/a | yes |
