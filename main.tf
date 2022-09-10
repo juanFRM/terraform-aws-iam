@@ -140,6 +140,7 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
     resources = ["*"]
   }
 
+
 statement {
     actions = [
       "dynamodb:Create*",
