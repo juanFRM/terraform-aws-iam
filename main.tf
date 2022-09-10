@@ -141,7 +141,7 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
   }
 
 
-statement {
+  statement {
     actions = [
       "dynamodb:Create*",
       "dynamodb:Restore*",
@@ -168,10 +168,10 @@ statement {
     ]
   }
 
-  # statement {
-  #   actions   = ["sts:AssumeRole"]
-  #   resources = var.crossaccount_roles
-  # }
+  statement {
+    actions   = ["sts:AssumeRole"]
+    resources = var.crossaccount_roles
+  }
 
 }
 
