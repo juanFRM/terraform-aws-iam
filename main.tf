@@ -40,9 +40,7 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
 
   statement {
     actions = [
-      "logs:CreateLogGroup",
-      "logs:CreateLogStream",
-      "logs:PutLogEvents"
+      "logs:*"
     ]
 
     resources = ["*"]
