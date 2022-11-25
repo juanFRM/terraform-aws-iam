@@ -107,7 +107,9 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
   statement {
     actions = [
       "eks:*",
-      "ecr:*"
+      "ecr:*",
+      "ecs:*"
+
     ]
 
     resources = [
