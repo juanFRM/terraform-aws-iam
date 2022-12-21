@@ -8,7 +8,7 @@ data "aws_iam_policy_document" "codebuild_role_assume" {
     actions = ["sts:AssumeRole"]
     principals {
       type        = "Service"
-      identifiers = ["codebuild.amazonaws.com", "codepipeline.amazonaws.com", "ec2.amazonaws.com"]
+      identifiers = ["codebuild.amazonaws.com", "codepipeline.amazonaws.com", "ec2.amazonaws.com", "codedeploy.amazonaws.com"]
     }
   }
 }
@@ -79,7 +79,8 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
       "iam:ListAttachedRolePolicies",
       "iam:ListInstanceProfiles",
       "iam:ListRoles",
-      "ec2:*"
+      "ec2:*",
+      "elasticloadbalancing:*"
     ]
 
     resources = ["*"]
@@ -127,7 +128,8 @@ data "aws_iam_policy_document" "codebuild_role_policy_document" {
   }
   statement {
     actions = [
-      "codestar-connections:*"
+      "codestar-connections:*",
+      "cloudwatch:*"
     ]
     resources = ["*"]
   }
